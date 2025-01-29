@@ -5,5 +5,68 @@ body{
     padding: 0;
     margin: 0;
     /* height: 100%; */
+    background: #202020;
     border: 1px solid red;
+}
+h1{
+    margin-left: 5%;
+}
+header{
+    background: black;
+    color: white;
+    padding: 30px;
+    /* border: 1px solid blue; */
+}
+.div-input-tarefa{
+    display: flex;
+    /* height: 20px; */
+    border: 1px solid green;
+    /* padding: 20px; */
+    margin-bottom: 2%;
+    
+}
+#input-tarefa{
+    margin-left: 5%;
+    flex: 95%;
+    border-radius: 10px;
+    font-size: 2rem;
+    padding-left: 10px;
+}
+#btn-addtarefa{
+    flex: 5%;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-right: 5%;
+}
+.opcoes-tarefa{
+    margin-left: 5%;
+    /* height: fit-content; */
+    border: 1px solid purple;
+    margin-bottom: 2%;
+}
+.opcoes-tarefa button{
+    border: none;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 2%;
+    text-align: center;
+    height: 10%;
+    color: white;
+    font-size: 1.1rem;
+    padding: 10px;
+    background: #303030;
+}
+.container-tarefas{
+    border: 1px solid hotpink;
+    margin-left: 5%;
+    margin-right: 5%;
+    height: 300px;
+}
+.tarefa{
+    background: white;
+    padding: 18px;
+    /* font-size: 2rem; */
+    margin-bottom: 2%;
+    border-radius: 10px;
 }
