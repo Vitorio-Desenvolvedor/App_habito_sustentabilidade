@@ -10,13 +10,21 @@ body{
     border: 1px solid red;
 }
 h1{
+    padding: 0;
     margin-left: 5%;
+    // border: 1px solid white;
 }
 header{
+    display: flex;
+    height: 100px;
     background: black;
     color: white;
-    padding: 30px;
+    // padding: 30px;
     /* border: 1px solid blue; */
+    *{
+        display: flex;
+        align-items: center;
+    }
 }
 .div-input-tarefa{
     display: flex;
@@ -52,13 +60,13 @@ header{
 .opcoes-tarefa{
     margin-left: 5%;
     /* height: fit-content; */
-    border: 1px solid purple;
+    // border: 1px solid purple;
     margin-bottom: 2%;
     button{
         border: none;
         display: inline-block;
         cursor: pointer;
-        margin-right: 2%;
+        margin-right: 1%;
         text-align: center;
         height: 10%;
         color: white;
@@ -68,12 +76,12 @@ header{
     }
 }
 .container-tarefas{
-    border: 1px solid hotpink;
+    // border: 1px solid hotpink;
     display: flex;
     flex-flow: column;
     margin-left: 5%;
     margin-right: 5%;
-    height: 300px;
+    // height: 300px;
 }
 .tarefa{
     display: flex;
@@ -84,7 +92,7 @@ header{
     height: 40px;
     /* padding: 18px; */
     /* font-size: 2rem; */
-    margin-bottom: 2%;
+    margin-bottom: 1%;
     border-radius: 10px;
     *{
         height: 40px;
@@ -118,5 +126,11 @@ header{
             flex: 50%;
             // border: 1px solid black;
         }
+    }
+}
+.marcada{
+    background: #ccc;
+    .tarefa-texto{
+        text-decoration: line-through;
     }
 }

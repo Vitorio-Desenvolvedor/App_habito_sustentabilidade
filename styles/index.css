@@ -12,14 +12,20 @@ body {
 }
 
 h1 {
+  padding: 0;
   margin-left: 5%;
 }
 
 header {
+  display: flex;
+  height: 100px;
   background: black;
   color: white;
-  padding: 30px;
   /* border: 1px solid blue; */
+}
+header * {
+  display: flex;
+  align-items: center;
 }
 
 .div-input-tarefa {
@@ -57,14 +63,13 @@ header {
 .opcoes-tarefa {
   margin-left: 5%;
   /* height: fit-content; */
-  border: 1px solid purple;
   margin-bottom: 2%;
 }
 .opcoes-tarefa button {
   border: none;
   display: inline-block;
   cursor: pointer;
-  margin-right: 2%;
+  margin-right: 1%;
   text-align: center;
   height: 10%;
   color: white;
@@ -74,12 +79,10 @@ header {
 }
 
 .container-tarefas {
-  border: 1px solid hotpink;
   display: flex;
   flex-flow: column;
   margin-left: 5%;
   margin-right: 5%;
-  height: 300px;
 }
 
 .tarefa {
@@ -91,7 +94,7 @@ header {
   height: 40px;
   /* padding: 18px; */
   /* font-size: 2rem; */
-  margin-bottom: 2%;
+  margin-bottom: 1%;
   border-radius: 10px;
 }
 .tarefa * {
@@ -121,4 +124,11 @@ header {
 }
 .tarefa .tarefa-opcoes .btn-delete {
   flex: 50%;
+}
+
+.marcada {
+  background: #ccc;
+}
+.marcada .tarefa-texto {
+  text-decoration: line-through;
 }/*# sourceMappingURL=index.css.map */
