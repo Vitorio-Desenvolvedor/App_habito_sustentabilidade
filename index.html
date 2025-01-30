@@ -13,14 +13,14 @@
     </header>
     <div class="menu-tarefas">
         <div class="div-input-tarefa">
-            <input id="input-tarefa" placeholder="Digite sua tarefa" type="text">
-            <button id="btn-addtarefa"><span class="material-icons">add</span></button>
+            <input onfocus="limparPlaceholder()" id="input-tarefa" placeholder="Digite sua tarefa" type="text">
+            <button onclick="funcAddTarefa()" id="btn-addtarefa"><span class="material-icons">add</span></button>
         </div>
         <div class="opcoes-tarefa">
             <button id="btn-afazer">A fazer (0)</button>
             <button id="btn-concluidas">Concluídas (0)</button>
         </div>
-        <div class="container-tarefas">
+        <div id="containerTarefas" class="container-tarefas">
             <div class="tarefa">
                 <div class="tarefa-icon">
                     <!-- <span class="material-icons">check_circle_outline</span> -->
