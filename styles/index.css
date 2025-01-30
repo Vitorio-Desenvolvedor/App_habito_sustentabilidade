@@ -5,6 +5,7 @@
 body {
   padding: 0;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
   /* height: 100%; */
   background: #202020;
   border: 1px solid red;
@@ -23,26 +24,34 @@ header {
 
 .div-input-tarefa {
   display: flex;
-  /* height: 20px; */
-  border: 1px solid green;
+  height: 40px;
   /* padding: 20px; */
+  margin-right: 5%;
+  margin-left: 5%;
   margin-bottom: 2%;
+  margin-top: 2%;
+}
+.div-input-tarefa * {
+  height: 40px;
 }
 
 #input-tarefa {
-  margin-left: 5%;
+  border: none;
   flex: 95%;
-  border-radius: 10px;
-  font-size: 2rem;
-  padding-left: 10px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  font-size: 1.05rem;
+  padding-left: 2%;
 }
 
 #btn-addtarefa {
+  border: none;
+  background: white;
   flex: 5%;
-  border-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
   font-size: 2rem;
   cursor: pointer;
-  margin-right: 5%;
 }
 
 .opcoes-tarefa {
@@ -66,6 +75,8 @@ header {
 
 .container-tarefas {
   border: 1px solid hotpink;
+  display: flex;
+  flex-flow: column;
   margin-left: 5%;
   margin-right: 5%;
   height: 300px;
@@ -74,10 +85,40 @@ header {
 .tarefa {
   display: flex;
   flex-flow: row;
+  justify-content: center;
+  align-items: center;
   background: white;
   height: 40px;
   /* padding: 18px; */
   /* font-size: 2rem; */
   margin-bottom: 2%;
   border-radius: 10px;
+}
+.tarefa * {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.tarefa .tarefa-icon {
+  flex: 5%;
+  justify-content: center;
+  align-items: center;
+}
+.tarefa .tarefa-texto {
+  flex: 85%;
+  padding-left: 1%;
+  justify-content: flex-start;
+}
+.tarefa .tarefa-opcoes {
+  display: flex;
+  flex: 10%;
+  justify-content: center;
+  align-items: center;
+}
+.tarefa .tarefa-opcoes .btn-editar {
+  flex: 50%;
+}
+.tarefa .tarefa-opcoes .btn-delete {
+  flex: 50%;
 }/*# sourceMappingURL=index.css.map */
