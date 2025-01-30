@@ -44,18 +44,18 @@ header{
     /* height: fit-content; */
     border: 1px solid purple;
     margin-bottom: 2%;
-}
-.opcoes-tarefa button{
-    border: none;
-    display: inline-block;
-    cursor: pointer;
-    margin-right: 2%;
-    text-align: center;
-    height: 10%;
-    color: white;
-    font-size: 1.1rem;
-    padding: 10px;
-    background: #303030;
+    button{
+        border: none;
+        display: inline-block;
+        cursor: pointer;
+        margin-right: 2%;
+        text-align: center;
+        height: 10%;
+        color: white;
+        font-size: 1.1rem;
+        padding: 10px;
+        background: #303030;
+    }
 }
 .container-tarefas{
     border: 1px solid hotpink;
@@ -64,8 +64,11 @@ header{
     height: 300px;
 }
 .tarefa{
+    display: flex;
+    flex-flow: row;
     background: white;
-    padding: 18px;
+    height: 40px;
+    /* padding: 18px; */
     /* font-size: 2rem; */
     margin-bottom: 2%;
     border-radius: 10px;
