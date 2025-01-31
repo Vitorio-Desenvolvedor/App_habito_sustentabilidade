@@ -107,9 +107,11 @@ header * {
   flex: 5%;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 .tarefa .tarefa-texto {
   flex: 85%;
+  cursor: pointer;
   padding-left: 1%;
   justify-content: flex-start;
 }
@@ -121,8 +123,10 @@ header * {
 }
 .tarefa .tarefa-opcoes .btn-editar {
   flex: 50%;
+  cursor: pointer;
 }
 .tarefa .tarefa-opcoes .btn-delete {
+  cursor: pointer;
   flex: 50%;
 }
 

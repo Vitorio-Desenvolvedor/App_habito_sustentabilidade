@@ -104,10 +104,12 @@ header{
         flex: 5%;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         // border: 1px solid rebeccapurple;
     }
     .tarefa-texto{
         flex: 85%;
+        cursor: pointer;
         padding-left: 1%;
         justify-content: flex-start;
         // border: 1px solid gold;
@@ -120,9 +122,11 @@ header{
         align-items: center;
         .btn-editar{
             flex: 50%;
+            cursor: pointer;
             // border: 1px solid black;
         }
         .btn-delete{
+            cursor: pointer;
             flex: 50%;
             // border: 1px solid black;
         }
