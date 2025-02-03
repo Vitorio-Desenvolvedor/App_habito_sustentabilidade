@@ -65,6 +65,9 @@ function marcarTarefa(id_tarefa, texto_tarefa){
     btn_concluidas.innerHTML = `Concluídas (${Object.keys(dicionarioTarefasConcluidas).length})`;
 
 }
+function containerAFazer(){
+    containerTarefas.innerHTML = "";
+}
 
 input_tarefa.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
