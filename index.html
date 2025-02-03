@@ -1,0 +1,64 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador tarefas</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+    <header>
+        <h1>Gerenciador de Tarefas</h1>
+    </header>
+    <div class="menu-tarefas">
+        <div class="div-input-tarefa">
+            <input onfocus="limparPlaceholder()" id="input-tarefa" placeholder="Digite sua tarefa" type="text">
+            <button onclick="funcAddTarefa()" id="btn-addtarefa"><span class="material-icons">add</span></button>
+        </div>
+        <div class="opcoes-tarefa">
+            <button onclick="btnAFazer()" id="btn-afazer">A fazer (0)</button>
+            <button onclick="btnConcluidas()" id="btn-concluidas">Concluídas (0)</button>
+        </div>
+        <div id="containerTarefas" class="container-tarefas">
+            <div class="tarefa">
+                <div class="tarefa-icon">
+                    <!-- <span class="material-icons">check_circle_outline</span> -->
+                    <span class="material-icons">radio_button_unchecked</span>
+                </div>
+                <div class="tarefa-texto">
+                    Tarefa teste
+                </div>
+                <div class="tarefa-opcoes">
+                    <div class="btn-editar">
+                        <span class="material-icons">edit</span>
+                    </div>
+                    <div class="btn-delete">
+                        <span class="material-icons">delete_outline</span>
+                    </div>
+                </div>
+            </div>
+            <div class="tarefa marcada">
+                <div class="tarefa-icon">
+                    <!-- <span class="material-icons">check_circle_outline</span> -->
+                    <span class="material-icons">radio_button_unchecked</span>
+                </div>
+                <div class="tarefa-texto">
+                    Tarefa teste
+                </div>
+                <div class="tarefa-opcoes">
+                    <div class="btn-editar">
+                        <span class="material-icons">edit</span>
+                    </div>
+                    <div class="btn-delete">
+                        <span class="material-icons">delete_outline</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
