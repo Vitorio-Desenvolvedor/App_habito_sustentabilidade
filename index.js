@@ -6,6 +6,7 @@ const dicionarioConcluidas = {};
 let contador = 0;
 let btn_aFazer = document.getElementById("btn-afazer");
 let btn_concluidas = document.getElementById("btn-concluidas");
+// comentário simples
 
 
 function funcAddTarefa(){
