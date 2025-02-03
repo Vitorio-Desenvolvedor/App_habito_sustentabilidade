@@ -17,10 +17,21 @@ function funcAddTarefa(){
     let idTarefa = `'${contador}${texto_tarefa}'`;
     dicionarioAFazer[idTarefa] = texto_tarefa;
     btnAFazer();
-
+    contador += 1;
     input_tarefa.value = "";
     input_tarefa.onfocus();
 
+};
+function deletarTarefa(id_tarefa){
+    // console.log(id_tarefa)
+    delete dicionarioAFazer[`'${id_tarefa}'`];
+    btnAFazer();
+};
+function marcarTarefa(id_tarefa){
+    real_idTarefa = `'${id_tarefa}'`;
+    dicionarioConcluidas[real_idTarefa] = dicionarioAFazer[real_idTarefa];
+    delete dicionarioAFazer[real_idTarefa];
+    btnAFazer();
 };
 
 function btnAFazer(){
@@ -29,17 +40,17 @@ function btnAFazer(){
         if (dicionarioAFazer.hasOwnProperty(id_tarefa)){
             tarefa =     
             `<div class="tarefa">
-                <div class="tarefa-icon">
+                <div onclick="marcarTarefa(${id_tarefa})" class="tarefa-icon">
                     <span class="material-icons">radio_button_unchecked</span>
                 </div>
-                <div class="tarefa-texto">
+                <div onclick="marcarTarefa(${id_tarefa})" class="tarefa-texto">
                     ${dicionarioAFazer[id_tarefa]}
                 </div>
                 <div class="tarefa-opcoes">
                     <div class="btn-editar">
                         <span class="material-icons">edit</span>
                     </div>
-                    <div class="btn-delete">
+                    <div onclick="deletarTarefa(${id_tarefa})" class="btn-delete">
                         <span class="material-icons">delete_outline</span>
                     </div>
                 </div>
