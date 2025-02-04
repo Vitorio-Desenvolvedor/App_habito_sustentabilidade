@@ -54,6 +54,19 @@ function marcarTarefa(id_tarefa){
 
 function btnAFazer(){
     containerTarefas.innerHTML = "";
+    btn_aFazer.classList.add('btn-selecionado');
+    if (btn_concluidas.classList.contains('btn-selecionado')){
+        btn_concluidas.classList.remove('btn-selecionado');
+    };
+    if (Object.keys(dicionarioAFazer).length < 1){
+        containerTarefas.innerHTML = 
+        `<div class="semTarefas">
+            Não há tarefas aqui
+        </div>`;
+        btn_aFazer.innerHTML = `A Fazer (${Object.keys(dicionarioAFazer).length})`;
+        btn_concluidas.innerHTML = `Concluídas (${Object.keys(dicionarioConcluidas).length})`;    
+        return;
+    }
     for (const id_tarefa in dicionarioAFazer){
         if (dicionarioAFazer.hasOwnProperty(id_tarefa)){
             tarefa =     
@@ -82,6 +95,19 @@ function btnAFazer(){
 };
 function btnConcluidas(){
     containerTarefas.innerHTML = "";
+    btn_concluidas.classList.add('btn-selecionado');
+    if (btn_aFazer.classList.contains('btn-selecionado')){
+        btn_aFazer.classList.remove('btn-selecionado');
+    };
+    if (Object.keys(dicionarioConcluidas).length < 1){
+        containerTarefas.innerHTML = 
+        `<div class="semTarefas">
+            Não há tarefas aqui
+        </div>`;
+        btn_aFazer.innerHTML = `A Fazer (${Object.keys(dicionarioAFazer).length})`;
+        btn_concluidas.innerHTML = `Concluídas (${Object.keys(dicionarioConcluidas).length})`;    
+        return;
+    }
     for (const id_tarefa in dicionarioConcluidas){
         if (dicionarioConcluidas.hasOwnProperty(id_tarefa)){
             tarefa =     

@@ -7,7 +7,15 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   /* height: 100%; */
-  background: #202020;
+  background: #121212;
+}
+
+input::-moz-placeholder {
+  color: black; /* Cor do placeholder */
+}
+
+input::placeholder {
+  color: black; /* Cor do placeholder */
 }
 
 h1 {
@@ -66,15 +74,24 @@ header * {
 }
 .opcoes-tarefa button {
   border: none;
+  width: 140px;
   display: inline-block;
   cursor: pointer;
   margin-right: 1%;
   text-align: center;
   height: 10%;
-  color: white;
+  border-radius: 20px;
   font-size: 1.1rem;
   padding: 10px;
-  background: #303030;
+}
+.opcoes-tarefa button:hover {
+  background: #080808;
+  color: white;
+}
+
+.btn-selecionado {
+  background: black;
+  color: white;
 }
 
 .container-tarefas {
@@ -131,4 +148,11 @@ header * {
 }
 .marcada .tarefa-texto {
   text-decoration: line-through;
+}
+
+.semTarefas {
+  color: #808080;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }/*# sourceMappingURL=index.css.map */
