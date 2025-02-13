@@ -69,6 +69,7 @@ header * {
 
 .opcoes-tarefa {
   margin-left: 5%;
+  display: flex;
   /* height: fit-content; */
   margin-bottom: 2%;
 }
@@ -77,23 +78,25 @@ header * {
   width: 140px;
   display: inline-block;
   cursor: pointer;
-  margin-right: 1%;
+  margin-right: 4px;
   text-align: center;
   height: 10%;
-  border-radius: 20px;
+  border-radius: 5px;
   font-size: 1.1rem;
-  padding: 10px;
+  padding: 12px;
 }
 .opcoes-tarefa button:hover {
+  padding: 10px;
+  border: 2px solid white;
   color: white;
   background: #080808;
-  border: 1px solid white;
 }
 
-.btn-selecionado {
+button.btn-selecionado {
+  padding: 10px;
   background: black;
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 .container-tarefas {
