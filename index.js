@@ -10,6 +10,82 @@ let btn_aFazer = document.getElementById("btn-afazer");
 let btn_concluidas = document.getElementById("btn-concluidas");
 // comentário simples
 
+function switchMenuIcon(mobileMenu, navList) {
+    // let mobileMenu
+    if (navList.classList.contains("active")) {
+        mobileMenu.classList.add("close");
+        setTimeout(() => {
+            mobileMenu.innerHTML = "close";
+            mobileMenu.classList.remove("close");
+        }, 500); // Tempo deve coincidir com a duração da transição
+    } else {
+        mobileMenu.classList.add("close");
+        setTimeout(() => {
+            mobileMenu.innerHTML = "menu";
+            mobileMenu.classList.remove("close");
+        }, 500); // Tempo deve coincidir com a duração da transição
+    }
+
+}
+
+
+
+class MobileNavbar{
+    constructor(mobileMenu, navList, navLinks){
+        this.mobileMenu = document.querySelector(mobileMenu);
+        this.navList = document.querySelector(navList);
+        this.navLinks = document.querySelectorAll(navLinks);
+        this.activeClass = "active";
+
+        this.handleClick = this.handleClick.bind(this);
+    }
+
+    animateLinks(){
+        // console.log(this.navLinks)
+        this.navLinks.forEach((link) => {
+            link.style.animation ? (link.style.animation = "") : (link.style.animation = `navLinkFade 0.5s ease forwards 0.3s`);
+        });
+    }
+    handleClick() {
+        this.navList.classList.toggle(this.activeClass);
+        this.animateLinks();
+        
+        switchMenuIcon(this.mobileMenu, this.navList);
+    }
+    
+    addClickEvent(){
+        this.mobileMenu.addEventListener("click", this.handleClick);
+    }
+    init(){
+        if (this.mobileMenu){
+            this.addClickEvent();
+        }
+        return this;
+    }
+}
+const mobileNavbar = new MobileNavbar("#menu-icon span", ".nav-list", ".nav-list li");
+mobileNavbar.init();
+
+document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('nav-list');
+    const toggleButton = document.getElementById('menu-icon');
+
+    // toggleButton.addEventListener('click', () => {
+    //     mobileMenu.classList.toggle('active');
+    // });
+
+    document.addEventListener('click', (event) => {
+        if (mobileMenu.contains(event.target) || toggleButton.contains(event.target)) {
+            let zero = 0;
+        }else{
+            if (mobileMenu.classList.contains("active")){
+                // switchMenuIcon(document.querySelector("#menu-icon span"));
+                // mobileMenu.classList.remove('active');
+                mobileNavbar.handleClick();
+            }
+        }
+    });
+});
 
 function funcAddTarefa(){
     let texto_tarefa = input_tarefa.value;

@@ -7,12 +7,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador tarefas</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/responsivo.css">
 </head>
 <body onload="btnAFazer()">
     <header>
-        <h1>Gerenciador de Tarefas</h1>
+        <nav>
+        <div class="logo"><a href="/">Gerenciador de Tarefas</a></div>
+        <div id="menu-icon">
+            <span class="material-symbols-outlined">menu</span>
+        </div>
+        <ul id="nav-list" class="nav-list">
+            <li><a href="/">Início</a></li>
+            <li><a href="/">Sobre</a></li>
+            <li><a href="/">Contato</a></li>
+        </ul>
+        </nav>
     </header>
     <div class="menu-tarefas">
         <div class="div-input-tarefa">
