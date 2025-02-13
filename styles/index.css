@@ -43,9 +43,10 @@ nav .logo {
 nav #menu-icon {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   height: 100%;
-  width: 300px;
+  width: 200px;
+  margin-right: 5%;
   cursor: pointer;
 }
 nav #menu-icon span {
@@ -86,7 +87,8 @@ nav .nav-list li {
   display: flex;
   height: 40px;
   width: 100%;
-  justify-content: center;
+  padding-right: 5vw;
+  justify-content: flex-end;
   align-items: center;
   letter-spacing: 3px;
   opacity: 0;

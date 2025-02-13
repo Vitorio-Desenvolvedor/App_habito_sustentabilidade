@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   header {
     font-size: 16px;
     text-align: center;
@@ -10,6 +10,17 @@
   }
   .div-input-tarefa {
     margin-bottom: 12px;
+  }
+  nav .logo {
+    display: flex;
+    font-size: 24px;
+  }
+  nav #menu-icon {
+    width: 40vw;
+    justify-content: flex-end;
+  }
+  nav .nav-list {
+    width: 40vw;
   }
   .opcoes-tarefa {
     margin: 0;
