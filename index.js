@@ -11,15 +11,18 @@ let btn_concluidas = document.getElementById("btn-concluidas");
 // comentário simples
 
 function switchMenuIcon(mobileMenu, navList) {
+    let blocoIcon = document.getElementById("menu-icon");
     // let mobileMenu
     if (navList.classList.contains("active")) {
         mobileMenu.classList.add("close");
+        mobileMenu.style.position = "fixed";
         setTimeout(() => {
             mobileMenu.innerHTML = "close";
             mobileMenu.classList.remove("close");
         }, 500); // Tempo deve coincidir com a duração da transição
     } else {
         mobileMenu.classList.add("close");
+        mobileMenu.style.position = "static"
         setTimeout(() => {
             mobileMenu.innerHTML = "menu";
             mobileMenu.classList.remove("close");

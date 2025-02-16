@@ -30,8 +30,13 @@
         margin: 0;
         display: flex;
         margin-bottom: 12px;
+        margin-left: 5vw;
+        margin-right: 5vw;
         justify-content: center;
         // align-items: center;
+        button{
+            flex: 50%;
+        }
     }
     .tarefa{
         .tarefa-icon{

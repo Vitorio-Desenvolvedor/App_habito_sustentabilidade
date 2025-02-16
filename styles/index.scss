@@ -3,13 +3,25 @@
     margin: 0;
     padding: 0;
 }
+html{
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     background: #151515;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
+    // touch-action: none;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    // overflow: hidden;
+    border: 1px solid red;
+    max-width: 100dvw;
+    // min-height: 100vh;
     *{
         margin: 0;
         padding: 0;
@@ -45,19 +57,21 @@ nav{
         display: flex;
         align-items: center;
         justify-content: flex-end;
-        height: 100%;
+        height: 12vh;
         width: 200px;
         margin-right: 5%;
         cursor: pointer;
+        // z-index: 100;
         // transition: 0.3s;
         // &:hover{
-        //     span{
-        //         background: #202020;
-        //         padding: 10px;
-        //         border-radius: 25px;
-        //     }
+            //     span{
+                //         background: #202020;
+                //         padding: 10px;
+                //         border-radius: 25px;
+                //     }
         // }
         span{
+            background: black;
             display: flex;
             align-items: center;
             justify-content: center;            
@@ -86,15 +100,20 @@ nav{
     .nav-list{
         list-style: none;
         display: flex;
-        position: absolute;
+        // z-index: -1;
+        position: fixed;
+        // top: 12vh;
         top: 12vh;
+        // padding-top: 12vh;
         right: 0;
         width: 300px;
+        z-index: 1000;
         height: 88vh;
         background: black;
         flex-direction: column;
         align-items: center;
         // justify-content: space-around;
+        // display: none;
         transform: translateX(100%);
         transition: transform 0.3s ease-in;
         li{
@@ -116,13 +135,16 @@ nav{
         }
     }
     .nav-list.active{
+        right: 0;
         transform: translateX(0);
+        // transition: transform 0.3s ease-in;
+        display: flex;
     }
 
 }
 .menu-tarefas{
     // border: 1px solid red;
-    min-height: 88vh;
+    min-height: 80vh;
 }
 @keyframes navLinkFade {
     from{

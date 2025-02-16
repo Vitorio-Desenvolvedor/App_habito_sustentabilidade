@@ -4,6 +4,14 @@
   padding: 0;
 }
 
+html {
+  overflow-x: hidden;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #151515;
   color: #fff;
@@ -11,6 +19,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  border: 1px solid red;
+  max-width: 100dvw;
 }
 body * {
   margin: 0;
@@ -44,12 +54,13 @@ nav #menu-icon {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  height: 100%;
+  height: 12vh;
   width: 200px;
   margin-right: 5%;
   cursor: pointer;
 }
 nav #menu-icon span {
+  background: black;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -72,10 +83,11 @@ nav #menu-icon span.close {
 nav .nav-list {
   list-style: none;
   display: flex;
-  position: absolute;
+  position: fixed;
   top: 12vh;
   right: 0;
   width: 300px;
+  z-index: 1000;
   height: 88vh;
   background: black;
   flex-direction: column;
@@ -97,11 +109,13 @@ nav .nav-list li:hover {
   background: #202020;
 }
 nav .nav-list.active {
+  right: 0;
   transform: translateX(0);
+  display: flex;
 }
 
 .menu-tarefas {
-  min-height: 88vh;
+  min-height: 80vh;
 }
 
 @keyframes navLinkFade {
