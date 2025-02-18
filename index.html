@@ -14,15 +14,10 @@
 <body onload="btnAFazer()">
     <header>
         <nav>
-        <div class="logo"><a href="/">Gerenciador de Tarefas</a></div>
-        <div id="menu-icon">
-            <span class="material-symbols-outlined">menu</span>
-        </div>
-        <ul id="nav-list" class="nav-list">
-            <li><a href="/">Início</a></li>
-            <li><a href="/">Sobre</a></li>
-            <li><a href="/">Contato</a></li>
-        </ul>
+            <div id="menu-icon">
+                <span id="menu-icon-span" class="material-symbols-outlined">menu</span>
+            </div>
+            <div class="logo"><a href="/">Hoje</a></div>
         </nav>
     </header>
     <div class="menu-tarefas">
@@ -35,6 +30,23 @@
             <button onclick="btnConcluidas()" id="btn-concluidas">Concluídas (0)</button>
         </div>
         <div id="containerTarefas" class="container-tarefas">
+        </div>
+    </div>
+    <div class="addTaskOptions">
+        <span class="material-symbols-outlined">add</span>
+    </div>
+    <div class="tab-bar">
+        <div class="icon-tab-bar icon-hoje">
+            <img src="icons/clipboard.png" alt="">
+        </div>
+        <div class="icon-tab-bar icon-habitos">
+            <span class="material-symbols-outlined">workspace_premium</span>
+        </div>
+        <div class="icon-tab-bar icon-alltasks">
+            <span class="material-symbols-outlined">task_alt</span>
+        </div>
+        <div class="icon-tab-bar icon-moreoptions">
+            <span class="material-symbols-outlined">more_vert</span>
         </div>
     </div>
     <script src="index.js"></script>
