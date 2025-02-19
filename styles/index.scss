@@ -87,11 +87,14 @@ nav{
         height: 100%;
         // align-items: center;
         flex: 1;
-        justify-content: center;
+        justify-content: space-around;
         align-items: center;
         &:hover{
             background:#303030 ;
         }
+    }
+    .icon-tab-bar.icon-selected{
+        border-top: 4px solid darkmagenta;
     }
 }
 .addTaskOptions{
@@ -112,9 +115,6 @@ nav{
     &:hover{
         opacity: 0.6;
     }
-    // span{
-
-    // }
 }
 
 .div-input-tarefa{
@@ -125,8 +125,8 @@ nav{
     /* padding: 20px; */
     margin-right: 5%;
     margin-left: 5%;
-    margin-bottom: 2%;
-    margin-top: 2%;
+    margin-bottom: 20px;
+    margin-top: 5px;
     *{
         height: 40px;
     }
@@ -171,7 +171,7 @@ nav{
     button{
         // background: white;
         border: none;
-        width: 140px;
+        width: 150px;
         display: inline-block;
         cursor: pointer;
         margin-right: 3px;

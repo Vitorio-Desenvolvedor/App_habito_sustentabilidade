@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="styles/index.css">
     <link rel="stylesheet" href="styles/responsivo.css">
 </head>
-<body onload="btnAFazer()">
+<body onload="btnHoje()">
     <header>
         <nav>
             <div id="menu-icon">
@@ -36,17 +36,21 @@
         <span class="material-symbols-outlined">add</span>
     </div>
     <div class="tab-bar">
-        <div class="icon-tab-bar icon-hoje">
+        <div onclick="btnHoje()" id="btnHoje" class="icon-tab-bar icon-hoje">
             <img src="icons/clipboard.png" alt="">
+            Hoje
         </div>
-        <div class="icon-tab-bar icon-habitos">
+        <div onclick="btnHabito()" id="btnHabito" class="icon-tab-bar icon-habitos">
             <span class="material-symbols-outlined">workspace_premium</span>
+            Hábitos
         </div>
-        <div class="icon-tab-bar icon-alltasks">
+        <div onclick="btnTarefas()" id="btnTarefas" class="icon-tab-bar icon-alltasks">
             <span class="material-symbols-outlined">task_alt</span>
+            Tarefas
         </div>
-        <div class="icon-tab-bar icon-moreoptions">
+        <div onclick="btnMaisOpcoes()" id="btnMaisOpcoes" class="icon-tab-bar icon-moreoptions">
             <span class="material-symbols-outlined">more_vert</span>
+            Mais
         </div>
     </div>
     <script src="index.js"></script>

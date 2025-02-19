@@ -81,11 +81,14 @@ nav .logo a {
   flex-direction: column;
   height: 100%;
   flex: 1;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 }
 .tab-bar .icon-tab-bar:hover {
   background: #303030;
+}
+.tab-bar .icon-tab-bar.icon-selected {
+  border-top: 4px solid darkmagenta;
 }
 
 .addTaskOptions {
@@ -113,8 +116,8 @@ nav .logo a {
   /* padding: 20px; */
   margin-right: 5%;
   margin-left: 5%;
-  margin-bottom: 2%;
-  margin-top: 2%;
+  margin-bottom: 20px;
+  margin-top: 5px;
 }
 .div-input-tarefa * {
   height: 40px;
@@ -159,7 +162,7 @@ nav .logo a {
 }
 .opcoes-tarefa button {
   border: none;
-  width: 140px;
+  width: 150px;
   display: inline-block;
   cursor: pointer;
   margin-right: 3px;

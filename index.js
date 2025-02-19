@@ -8,7 +8,66 @@ const dicionarioConcluidas = {};
 let contador = 0;
 let btn_aFazer = document.getElementById("btn-afazer");
 let btn_concluidas = document.getElementById("btn-concluidas");
+let btn_selected = document.getElementById("btnHoje");
 // comentário simples
+
+function btnHoje(){
+    let btnHoje = document.getElementById("btnHoje");
+    let btnHojeClass = btnHoje.classList;
+    if (btnHojeClass.contains("icon-selected")){
+        // btn_selected.classList.add("icon-selected");
+        let zero =0;
+    }else{
+        btn_selected.classList.remove("icon-selected");
+        btnHojeClass.add("icon-selected");
+        btn_selected = btnHoje;
+        btnAFazer();
+        
+    }
+
+}
+function btnHabito(){
+    let btnHabito = document.getElementById("btnHabito");
+    let btnHabitoClass = btnHabito.classList;
+    if (btnHabitoClass.contains("icon-selected")){
+        // btn_selected.classList.add("icon-selected");
+        let zero = 0;
+    }else{
+        btn_selected.classList.remove("icon-selected");
+        btnHabitoClass.add("icon-selected");
+        btn_selected = btnHabito;
+
+    }
+
+}
+function btnTarefas(){
+    let btnTarefas = document.getElementById("btnTarefas");
+    let btnTarefasClass = btnTarefas.classList;
+    if (btnTarefasClass.contains("icon-selected")){
+        // btn_selected.classList.add("icon-selected");
+        let zero = 0;
+    }else{
+        btn_selected.classList.remove("icon-selected");
+        btnTarefasClass.add("icon-selected");
+        btn_selected = btnTarefas;
+
+    }
+
+}
+function btnMaisOpcoes(){
+    let btnMaisOpcoes = document.getElementById("btnMaisOpcoes");
+    let btnMaisOpcoesClass = btnMaisOpcoes.classList;
+    if (btnMaisOpcoesClass.contains("icon-selected")){
+        // btn_selected.classList.add("icon-selected");
+        let zero = 0;
+    }else{
+        btn_selected.classList.remove("icon-selected");
+        btnMaisOpcoesClass.add("icon-selected");
+        btn_selected = btnMaisOpcoes;
+
+    }
+
+}
 
 function switchMenuIcon(mobileMenu, navList) {
     let blocoIcon = document.getElementById("menu-icon");
