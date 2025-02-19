@@ -53,6 +53,7 @@ nav #menu-icon-span {
   display: flex;
   align-items: center;
   cursor: pointer;
+  display: none;
 }
 nav .logo {
   font-size: 35px;
