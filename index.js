@@ -22,10 +22,12 @@ function btnHoje(){
         btnHojeClass.add("icon-selected");
         btn_selected = btnHoje;
         btnAFazer();
-        
     }
-
 }
+
+
+
+
 function btnHabito(){
     let btnHabito = document.getElementById("btnHabito");
     let btnHabitoClass = btnHabito.classList;
@@ -36,10 +38,10 @@ function btnHabito(){
         btn_selected.classList.remove("icon-selected");
         btnHabitoClass.add("icon-selected");
         btn_selected = btnHabito;
-
     }
-
 }
+
+
 function btnTarefas(){
     let btnTarefas = document.getElementById("btnTarefas");
     let btnTarefasClass = btnTarefas.classList;
@@ -50,10 +52,10 @@ function btnTarefas(){
         btn_selected.classList.remove("icon-selected");
         btnTarefasClass.add("icon-selected");
         btn_selected = btnTarefas;
-
     }
-
 }
+
+
 function btnMaisOpcoes(){
     let btnMaisOpcoes = document.getElementById("btnMaisOpcoes");
     let btnMaisOpcoesClass = btnMaisOpcoes.classList;
@@ -64,10 +66,38 @@ function btnMaisOpcoes(){
         btn_selected.classList.remove("icon-selected");
         btnMaisOpcoesClass.add("icon-selected");
         btn_selected = btnMaisOpcoes;
-
     }
-
 }
+
+
+// function showTaskHabitMenu(){
+//     let menuTaskHabit = document.getElementById("menuTaskHabit");
+//     menuTaskHabit.classList.add("activeAddTaskHabit");
+// }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const menuTaskHabit = document.getElementById('menuTaskHabit');
+    const toggleButton = document.getElementById('addTaskOptions');
+
+    toggleButton.addEventListener('click', () => {
+        menuTaskHabit.classList.toggle("activeAddTaskHabit");
+    });
+
+    document.addEventListener('click', (event) => {
+        if (menuTaskHabit.contains(event.target) || toggleButton.contains(event.target)) {
+            let zero = 0;
+            return;
+        }else{
+            if (menuTaskHabit.classList.contains("activeAddTaskHabit")){
+                // switchMenuIcon(document.querySelector("#menu-icon span"));
+                // mobileMenu.classList.remove('active');
+                menuTaskHabit.classList.remove("activeAddTaskHabit");
+            }
+        }
+    });
+});
+
 
 function switchMenuIcon(mobileMenu, navList) {
     let blocoIcon = document.getElementById("menu-icon");
@@ -87,7 +117,6 @@ function switchMenuIcon(mobileMenu, navList) {
             mobileMenu.classList.remove("close");
         }, 500); // Tempo deve coincidir com a duração da transição
     }
-
 }
 
 
@@ -126,28 +155,8 @@ class MobileNavbar{
     }
 }
 const mobileNavbar = new MobileNavbar("#menu-icon span", ".nav-list", ".nav-list li");
-mobileNavbar.init();
+// mobileNavbar.init();
 
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenu = document.getElementById('nav-list');
-    const toggleButton = document.getElementById('menu-icon');
-
-    // toggleButton.addEventListener('click', () => {
-    //     mobileMenu.classList.toggle('active');
-    // });
-
-    document.addEventListener('click', (event) => {
-        if (mobileMenu.contains(event.target) || toggleButton.contains(event.target)) {
-            let zero = 0;
-        }else{
-            if (mobileMenu.classList.contains("active")){
-                // switchMenuIcon(document.querySelector("#menu-icon span"));
-                // mobileMenu.classList.remove('active');
-                mobileNavbar.handleClick();
-            }
-        }
-    });
-});
 
 function funcAddTarefa(){
     let texto_tarefa = input_tarefa.value;

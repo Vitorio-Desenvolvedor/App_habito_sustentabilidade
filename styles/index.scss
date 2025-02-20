@@ -117,6 +117,77 @@ nav{
         opacity: 0.6;
     }
 }
+.addTaskHabit{
+    display: flex;
+    flex-direction: column;
+    transform: translateY(100%);
+    position: fixed;
+    width: 100vw;
+    height: 150px;
+    background: #1C1C1C;
+    bottom: 0;
+    z-index: 99;
+    text-align: center;
+    align-items: center;
+    transition: 0.3s transform;
+    // justify-content: space-around;
+    ul{
+        height: 100%;
+        width: 100%;
+
+    };
+    *{
+        // flex: 1;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+    }
+    .addTB{
+        flex: 1;
+        width: 100%;
+        cursor: pointer;
+        // border: 1px solid blue;
+        // justify-content: space-between;
+
+        span{
+            flex: 1;
+            color: #9815cc;
+            margin: 0 25px;
+            font-size: 30px;
+        }
+        span.right{
+            justify-content: flex-end;
+            color: #808080;
+        }
+        .addTBText{
+            padding: 15px 0;
+            flex: 19;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            height: 100%;
+            p{
+                flex: 1;
+            }
+            p.pDecoration{
+                flex: 3;
+                color: #808080;
+                font-size: 14px;
+                align-items: flex-end;
+            }
+        }
+        &:hover{
+            background: #303030;
+        }
+        *{
+            display: flex;
+            // border: 1px solid red;
+        }
+    }
+}
+.addTaskHabit.activeAddTaskHabit{
+    transform: translateY(0);
+}
 
 .div-input-tarefa{
     display: flex;
