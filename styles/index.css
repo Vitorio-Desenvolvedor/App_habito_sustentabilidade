@@ -199,6 +199,8 @@ nav .logo a {
   background: #fff;
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
+  border: 3px solid #9815cc;
+  border-right: none;
   font-size: 1.05rem;
   padding-left: 2%;
 }
@@ -206,6 +208,7 @@ nav .logo a {
 #btn-addtarefa {
   border: none;
   background: white;
+  border: 3px solid #9815cc;
   flex: 5%;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -214,6 +217,7 @@ nav .logo a {
   display: flex;
   justify-content: center;
   align-items: center;
+  border-left: none;
 }
 #btn-addtarefa span {
   height: -moz-fit-content;
@@ -240,7 +244,7 @@ nav .logo a {
 .opcoes-tarefa button:hover {
   color: white;
   background: #151515;
-  border: 2px solid white;
+  border: 3px solid  #9815cc;
 }
 
 button.btn-selecionado {
@@ -262,6 +266,7 @@ button.btn-selecionado {
   justify-content: center;
   align-items: center;
   background: white;
+  border: 3px solid #9815cc;
   height: 40px;
   /* padding: 18px; */
   /* font-size: 2rem; */
