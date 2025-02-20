@@ -1,75 +1,70 @@
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-}
-html{
+  }
+  
+  html {
     overflow-x: hidden;
     width: 100%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body{
+  }
+  
+  body {
     background: #121212;
     color: #fff;
     font-family: Arial, Helvetica, sans-serif;
-    // touch-action: none;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    // overflow: hidden;
-    // border: 1px solid red;
     max-width: 100dvw;
-    // min-height: 100vh;
-    // margin-bottom: 5%;
-    *{
-        margin: 0;
-        padding: 0;
-    } 
-}
-header{
+  }
+  body * {
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
     background: #121212;
-}
-nav{
+  }
+  
+  nav {
     height: 12vh;
-    // background: black;
     display: flex;
     flex-direction: row;
-    // justify-content: center;
     align-items: center;
     margin-left: 5%;
-    *{
-        height: 100%;
-        display: flex;
-        align-items: center;
-        // justify-content: center;
-    }
-    a{
-        transition: 0.3s ease-in-out;
-        &:hover{
-            opacity: 0.6;
-        }
-    }
-    #menu-icon-span{
-        font-size: 35px;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-        display: none;
-        // border: 1px solid red;
-    }
-    .logo{
-        font-size: 35px;
-        // border: 1px solid blue;
-        margin-left: 2%;
-        a{
-            text-decoration: none;
-            color: #fff;
-        }
-    }
-}
-.tab-bar{
+  }
+  nav * {
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  nav a {
+    transition: 0.3s ease-in-out;
+  }
+  nav a:hover {
+    opacity: 0.6;
+  }
+  nav #menu-icon-span {
+    font-size: 35px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+  }
+  nav .logo {
+    font-size: 35px;
+    margin-left: 2%;
+  }
+  nav .logo a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .tab-bar {
     position: fixed;
     bottom: 0;
     width: 100%;
@@ -81,27 +76,25 @@ nav{
     justify-content: space-around;
     height: 8vh;
     cursor: pointer;
-    // z-index: 10;
-    .icon-tab-bar{
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        // align-items: center;
-        flex: 1;
-        justify-content: space-around;
-        align-items: center;
-        &:hover{
-            background:#303030 ;
-        }
-    }
-    .icon-tab-bar.icon-selected{
-        border-top: 4px solid darkmagenta;
-    }
-}
-.addTaskOptions{
+  }
+  .tab-bar .icon-tab-bar {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .tab-bar .icon-tab-bar:hover {
+    background: #303030;
+  }
+  .tab-bar .icon-tab-bar.icon-selected {
+    border-top: 4px solid darkmagenta;
+  }
+  
+  .addTaskOptions {
     position: fixed;
     cursor: pointer;
-    // padding: 10px;
     border-radius: 15px;
     height: 60px;
     width: 60px;
@@ -113,11 +106,12 @@ nav{
     justify-content: center;
     align-items: center;
     background: darkblue;
-    &:hover{
-        opacity: 0.6;
-    }
-}
-.addTaskHabit{
+  }
+  .addTaskOptions:hover {
+    opacity: 0.6;
+  }
+  
+  .addTaskHabit {
     display: flex;
     flex-direction: column;
     transform: translateY(100%);
@@ -130,96 +124,91 @@ nav{
     text-align: center;
     align-items: center;
     transition: 0.3s transform;
-    // justify-content: space-around;
-    ul{
-        height: 100%;
-        width: 100%;
-
-    };
-    *{
-        // flex: 1;
-        display: flex;
-        align-items: center;
-        // justify-content: center;
-    }
-    .addTB{
-        flex: 1;
-        width: 100%;
-        cursor: pointer;
-        // border: 1px solid blue;
-        // justify-content: space-between;
-
-        span{
-            flex: 1;
-            color: #9815cc;
-            margin: 0 25px;
-            font-size: 30px;
-        }
-        span.right{
-            justify-content: flex-end;
-            color: #808080;
-        }
-        .addTBText{
-            padding: 15px 0;
-            flex: 19;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            height: 100%;
-            p{
-                flex: 1;
-            }
-            p.pDecoration{
-                flex: 3;
-                color: #808080;
-                font-size: 14px;
-                align-items: flex-end;
-            }
-        }
-        &:hover{
-            background: #303030;
-        }
-        *{
-            display: flex;
-            // border: 1px solid red;
-        }
-    }
-}
-.addTaskHabit.activeAddTaskHabit{
+  }
+  .addTaskHabit ul {
+    height: 100%;
+    width: 100%;
+  }
+  .addTaskHabit * {
+    display: flex;
+    align-items: center;
+  }
+  .addTaskHabit .addTB {
+    flex: 1;
+    width: 100%;
+    cursor: pointer;
+  }
+  .addTaskHabit .addTB span {
+    flex: 1;
+    color: #9815cc;
+    margin: 0 25px;
+    font-size: 30px;
+  }
+  .addTaskHabit .addTB span.right {
+    justify-content: flex-end;
+    color: #808080;
+  }
+  .addTaskHabit .addTB .addTBText {
+    padding: 15px 0;
+    flex: 19;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+  }
+  .addTaskHabit .addTB .addTBText p {
+    flex: 1;
+  }
+  .addTaskHabit .addTB .addTBText p.pDecoration {
+    flex: 3;
+    color: #808080;
+    font-size: 14px;
+    align-items: flex-end;
+  }
+  .addTaskHabit .addTB:hover {
+    background: #303030;
+  }
+  .addTaskHabit .addTB * {
+    display: flex;
+  }
+  
+  .addTaskHabit.activeAddTaskHabit {
     transform: translateY(0);
-}
-
-.div-input-tarefa{
+  }
+  
+  .div-input-tarefa {
     display: flex;
     height: 40px;
-    // background: #fff;
-    // border: 1px solid green;
     /* padding: 20px; */
     margin-right: 5%;
     margin-left: 5%;
     margin-bottom: 20px;
     margin-top: 5px;
-    *{
-        height: 40px;
-    }
-    
-}
-.menu-tarefas{
-    // border: 1px solid darkblue;
+  }
+  .div-input-tarefa * {
+    height: 40px;
+  }
+  
+  .menu-tarefas {
     margin-bottom: 9vh;
-}
-#input-tarefa{
+  }
+  
+  #input-tarefa {
     border: none;
     flex: 95%;
     background: #fff;
     border-top-left-radius: 10px;
     border-bottom-left-radius: 10px;
+    border: 3px solid #9815cc;
+    border-right: none;
     font-size: 1.05rem;
     padding-left: 2%;
-}
-#btn-addtarefa{
+  }
+  
+  #btn-addtarefa {
     border: none;
     background: white;
+    border: 3px solid #9815cc;
     flex: 5%;
     border-top-right-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -228,111 +217,107 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    // border: 1px solid darkmagenta;
-    span{
-        // border: 1px solid red;
-        height: fit-content;
-    }
-}
-.opcoes-tarefa{
+    border-left: none;
+  }
+  #btn-addtarefa span {
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  
+  .opcoes-tarefa {
     margin-left: 5%;
     display: flex;
     /* height: fit-content; */
-    // border: 1px solid purple;
     margin-bottom: 2%;
-    button{
-        // background: white;
-        border: none;
-        width: 150px;
-        display: inline-block;
-        cursor: pointer;
-        margin-right: 3px;
-        text-align: center;
-        // height: 10%;
-        // color: white;
-        border-radius: 5px;
-        font-size: 1.1rem;
-        padding: 10px;
-        &:hover{
-            color: white;
-            background: #151515;
-            border: 2px solid white;
-        }
-    }
-}
-button.btn-selecionado{
+  }
+  .opcoes-tarefa button {
+    border: none;
+    width: 150px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 3px;
+    text-align: center;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    padding: 10px;
+  }
+  .opcoes-tarefa button:hover {
+    color: white;
+    background: #151515;
+    border: 3px solid  #9815cc;
+  }
+  
+  button.btn-selecionado {
     background: black;
     color: white;
-    border: 2px solid white;
-}
-.container-tarefas{
-    // border: 1px solid hotpink;
+    border: 3px solid #9815cc;
+  }
+  
+  .container-tarefas {
     display: flex;
     flex-flow: column;
     margin-left: 5%;
     margin-right: 5%;
-    // height: 300px;
-}
-.tarefa{
+  }
+  
+  .tarefa {
     display: flex;
     flex-flow: row;
     justify-content: center;
     align-items: center;
     background: white;
+    border: 3px solid #9815cc;
     height: 40px;
     /* padding: 18px; */
     /* font-size: 2rem; */
     margin-bottom: 1%;
     border-radius: 10px;
     color: black;
-    *{
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-    }
-    .tarefa-icon{
-        flex: 5%;
-        justify-content: center;
-        align-items: center;
-        // border: 1px solid rebeccapurple;
-    }
-    .tarefa-texto{
-        flex: 85%;
-        padding-left: 1%;
-        justify-content: flex-start;
-        // border: 1px solid gold;
-        max-width: 100%;
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
-    }
-    .tarefa-opcoes{
-        display: flex;
-        flex: 10%;
-        // border: 1px solid chartreuse;
-        justify-content: center;
-        align-items: center;
-        .btn-editar{
-            flex: 50%;
-            // border: 1px solid black;
-        }
-        .btn-delete{
-            flex: 50%;
-            // border: 1px solid black;
-        }
-    }
-}
-.marcada{
+  }
+  .tarefa * {
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .tarefa .tarefa-icon {
+    flex: 5%;
+    justify-content: center;
+    align-items: center;
+  }
+  .tarefa .tarefa-texto {
+    flex: 85%;
+    padding-left: 1%;
+    justify-content: flex-start;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .tarefa .tarefa-opcoes {
+    display: flex;
+    flex: 10%;
+    justify-content: center;
+    align-items: center;
+  }
+  .tarefa .tarefa-opcoes .btn-editar {
+    flex: 50%;
+  }
+  .tarefa .tarefa-opcoes .btn-delete {
+    flex: 50%;
+  }
+  
+  .marcada {
     background: #ccc;
-    .tarefa-texto{
-        text-decoration: line-through;
-    }
-}
-.semTarefas{
+  }
+  .marcada .tarefa-texto {
+    text-decoration: line-through;
+  }
+  
+  .semTarefas {
     color: #808080;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }/*# sourceMappingURL=index.css.map */

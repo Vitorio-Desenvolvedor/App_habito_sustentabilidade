@@ -21,6 +21,7 @@ body {
   overflow-x: hidden;
   max-width: 100dvw;
 }
+
 body * {
   margin: 0;
   padding: 0;
@@ -37,17 +38,21 @@ nav {
   align-items: center;
   margin-left: 5%;
 }
+
 nav * {
   height: 100%;
   display: flex;
   align-items: center;
 }
+
 nav a {
   transition: 0.3s ease-in-out;
 }
+
 nav a:hover {
   opacity: 0.6;
 }
+
 nav #menu-icon-span {
   font-size: 35px;
   display: flex;
@@ -55,10 +60,12 @@ nav #menu-icon-span {
   cursor: pointer;
   display: none;
 }
+
 nav .logo {
   font-size: 35px;
   margin-left: 2%;
 }
+
 nav .logo a {
   text-decoration: none;
   color: #fff;
@@ -77,6 +84,7 @@ nav .logo a {
   height: 8vh;
   cursor: pointer;
 }
+
 .tab-bar .icon-tab-bar {
   display: flex;
   flex-direction: column;
@@ -85,9 +93,11 @@ nav .logo a {
   justify-content: space-around;
   align-items: center;
 }
+
 .tab-bar .icon-tab-bar:hover {
   background: #303030;
 }
+
 .tab-bar .icon-tab-bar.icon-selected {
   border-top: 4px solid darkmagenta;
 }
@@ -107,6 +117,7 @@ nav .logo a {
   align-items: center;
   background: darkblue;
 }
+
 .addTaskOptions:hover {
   opacity: 0.6;
 }
@@ -125,29 +136,35 @@ nav .logo a {
   align-items: center;
   transition: 0.3s transform;
 }
+
 .addTaskHabit ul {
   height: 100%;
   width: 100%;
 }
+
 .addTaskHabit * {
   display: flex;
   align-items: center;
 }
+
 .addTaskHabit .addTB {
   flex: 1;
   width: 100%;
   cursor: pointer;
 }
+
 .addTaskHabit .addTB span {
   flex: 1;
   color: #9815cc;
   margin: 0 25px;
   font-size: 30px;
 }
+
 .addTaskHabit .addTB span.right {
   justify-content: flex-end;
   color: #808080;
 }
+
 .addTaskHabit .addTB .addTBText {
   padding: 15px 0;
   flex: 19;
@@ -156,18 +173,22 @@ nav .logo a {
   align-items: flex-start;
   height: 100%;
 }
+
 .addTaskHabit .addTB .addTBText p {
   flex: 1;
 }
+
 .addTaskHabit .addTB .addTBText p.pDecoration {
   flex: 3;
   color: #808080;
   font-size: 14px;
   align-items: flex-end;
 }
+
 .addTaskHabit .addTB:hover {
   background: #303030;
 }
+
 .addTaskHabit .addTB * {
   display: flex;
 }
@@ -185,6 +206,7 @@ nav .logo a {
   margin-bottom: 20px;
   margin-top: 5px;
 }
+
 .div-input-tarefa * {
   height: 40px;
 }
@@ -219,6 +241,7 @@ nav .logo a {
   align-items: center;
   border-left: none;
 }
+
 #btn-addtarefa span {
   height: -moz-fit-content;
   height: fit-content;
@@ -230,6 +253,7 @@ nav .logo a {
   /* height: fit-content; */
   margin-bottom: 2%;
 }
+
 .opcoes-tarefa button {
   border: none;
   width: 150px;
@@ -241,16 +265,17 @@ nav .logo a {
   font-size: 1.1rem;
   padding: 10px;
 }
+
 .opcoes-tarefa button:hover {
   color: white;
   background: #151515;
-  border: 3px solid  #9815cc;
+  border: 3px solid #9815cc;
 }
 
 button.btn-selecionado {
   background: black;
   color: white;
-  border: 2px solid white;
+  border: 3px solid #9815cc;
 }
 
 .container-tarefas {
@@ -274,6 +299,7 @@ button.btn-selecionado {
   border-radius: 10px;
   color: black;
 }
+
 .tarefa * {
   height: 40px;
   display: flex;
@@ -281,11 +307,13 @@ button.btn-selecionado {
   justify-content: center;
   cursor: pointer;
 }
+
 .tarefa .tarefa-icon {
   flex: 5%;
   justify-content: center;
   align-items: center;
 }
+
 .tarefa .tarefa-texto {
   flex: 85%;
   padding-left: 1%;
@@ -295,15 +323,18 @@ button.btn-selecionado {
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
 .tarefa .tarefa-opcoes {
   display: flex;
   flex: 10%;
   justify-content: center;
   align-items: center;
 }
+
 .tarefa .tarefa-opcoes .btn-editar {
   flex: 50%;
 }
+
 .tarefa .tarefa-opcoes .btn-delete {
   flex: 50%;
 }
@@ -311,6 +342,7 @@ button.btn-selecionado {
 .marcada {
   background: #ccc;
 }
+
 .marcada .tarefa-texto {
   text-decoration: line-through;
 }
@@ -320,4 +352,4 @@ button.btn-selecionado {
   display: flex;
   align-items: center;
   justify-content: center;
-}/*# sourceMappingURL=index.css.map */
+} /*# sourceMappingURL=index.css.map */
