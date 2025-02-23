@@ -93,6 +93,9 @@ nav .logo a {
   justify-content: space-around;
   align-items: center;
 }
+.tab-bar .icon-tab-bar img {
+  width: 23px;
+}
 
 .tab-bar .icon-tab-bar:hover {
   background: #303030;
@@ -100,6 +103,11 @@ nav .logo a {
 
 .tab-bar .icon-tab-bar.icon-selected {
   border-top: 4px solid darkmagenta;
+}
+
+.tab-bar .icon-tab-bar.icon-selected-moreOptions {
+  border-top: 3px solid #fff;
+  background: #222222;
 }
 
 .addTaskOptions {
@@ -352,4 +360,54 @@ button.btn-selecionado {
   display: flex;
   align-items: center;
   justify-content: center;
-} /*# sourceMappingURL=index.css.map */
+} 
+.menuMoreOptions {
+  display: flex;
+  position: fixed;
+  z-index: 99;
+  bottom: -100%;
+  right: 0;
+  margin-bottom: 8vh;
+  flex-direction: column;
+  background: #1C1C1C;
+  min-height: 55px;
+  width: 25vw;
+  transform: translateX(100%);
+  transition: 0.3s ease-in-out transform;
+}
+.menuMoreOptions ul {
+  list-style: none;
+  display: flex;
+}
+.menuMoreOptions ul li {
+  flex: 1;
+}
+.menuMoreOptions .allMoreOptions {
+  display: flex;
+  flex-direction: row;
+  height: 55px;
+  align-items: center;
+  padding: 0 2.5%;
+}
+.menuMoreOptions .allMoreOptions span {
+  display: flex;
+  align-items: center;
+  color: #9815cc;
+  flex: 1;
+}
+.menuMoreOptions .allMoreOptions .allMoreOptions-Text {
+  flex: 6;
+}
+.menuMoreOptions .allMoreOptions span.right {
+  display: flex;
+  color: #808080;
+  justify-content: flex-end;
+}
+.menuMoreOptions .allMoreOptions:hover {
+  background: #303030;
+}
+
+.menuMoreOptions.activeMenuMoreOptions {
+  transform: translateX(0);
+  bottom: 0;
+}/*# sourceMappingURL=index.css.map */

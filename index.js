@@ -59,14 +59,17 @@ function btnTarefas(){
 function btnMaisOpcoes(){
     let btnMaisOpcoes = document.getElementById("btnMaisOpcoes");
     let btnMaisOpcoesClass = btnMaisOpcoes.classList;
-    if (btnMaisOpcoesClass.contains("icon-selected")){
-        // btn_selected.classList.add("icon-selected");
-        let zero = 0;
-    }else{
-        btn_selected.classList.remove("icon-selected");
-        btnMaisOpcoesClass.add("icon-selected");
-        btn_selected = btnMaisOpcoes;
-    }
+
+    // btn_selected.classList.remove("icon-selected");
+    btnMaisOpcoesClass.toggle("icon-selected-moreOptions");
+    // btn_selected = btnMaisOpcoes;
+    menuMoreOptions();
+}
+
+
+function menuMoreOptions(){
+    let optionsMenu = document.getElementById("menuMoreOptions");
+    optionsMenu.classList.toggle("activeMenuMoreOptions");
 }
 
 
@@ -79,20 +82,31 @@ function btnMaisOpcoes(){
 document.addEventListener('DOMContentLoaded', () => {
     const menuTaskHabit = document.getElementById('menuTaskHabit');
     const toggleButton = document.getElementById('addTaskOptions');
+    const menuMoreOptions = document.getElementById("menuMoreOptions");
+    const btnMaisOpcoes = document.getElementById("btnMaisOpcoes");
 
     toggleButton.addEventListener('click', () => {
+        if (btn_selected == document.getElementById("btnMaisOpcoes")){
+            return;
+        };
         menuTaskHabit.classList.toggle("activeAddTaskHabit");
     });
 
     document.addEventListener('click', (event) => {
-        if (menuTaskHabit.contains(event.target) || toggleButton.contains(event.target)) {
-            let zero = 0;
-            return;
-        }else{
-            if (menuTaskHabit.classList.contains("activeAddTaskHabit")){
-                // switchMenuIcon(document.querySelector("#menu-icon span"));
-                // mobileMenu.classList.remove('active');
+        if (menuTaskHabit.classList.contains("activeAddTaskHabit")){
+            if (menuTaskHabit.contains(event.target) || toggleButton.contains(event.target)) {
+                let zero = 0;
+                return;
+            }else{
                 menuTaskHabit.classList.remove("activeAddTaskHabit");
+            }
+        };
+        if (menuMoreOptions.classList.contains("activeMenuMoreOptions")){
+            if (btnMaisOpcoes.contains(event.target) || menuMoreOptions.contains(event.target)){
+                return;
+            }else{
+                btnMaisOpcoes.classList.remove("icon-selected-moreOptions");
+                menuMoreOptions.classList.remove("activeMenuMoreOptions");
             }
         }
     });
