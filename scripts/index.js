@@ -73,6 +73,9 @@ function menuMoreOptions(){
 }
 
 
+function btnLinkOption(link){
+    window.location.href = link;
+}
 // function showTaskHabitMenu(){
 //     let menuTaskHabit = document.getElementById("menuTaskHabit");
 //     menuTaskHabit.classList.add("activeAddTaskHabit");
