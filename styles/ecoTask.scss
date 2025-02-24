@@ -4,8 +4,94 @@
     padding: 0;
 }
 body{
-    background-image: linear-gradient(to right, #0380AD, #78D680);
+    font-family: Arial, Helvetica, sans-serif;
+    // overflow: hidden;
+    a{
+        text-decoration: none;
+        color: #fff;
+    }
+
+
+}
+.containerEcoTask{
+    // background-image: linear-gradient(to right, #0380AD, #78D680);
     min-height: 100vh;
+    // background: #999999;
     width: 100vw;
-    // border: 1px solid red;
+    border: 1px solid red;
+    *{
+        display: flex;
+    }
+}
+.ecoTaskNavbar{
+    height: 12vh;
+    background: #427066;
+    // padding: 10px 5vw;
+    flex-direction: row;
+    flex-flow: column;
+    justify-content: space-around;
+    margin-bottom: 2vh;
+    .logoEcoTask{
+        // flex: 100%;
+        margin-left: 5vw;
+        color: #fff;
+    }
+}
+#btnVoltarHome{
+    border-radius: 25px;
+    background: white;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: 1vw;
+    margin-bottom: 7px;
+    height: 40px;
+    cursor: pointer;
+    // padding: 0 10px;
+    width: 40px;
+    // flex: 1;
+}
+.containerTasksRanking{
+    margin: 0 5vw;
+    border: 1px solid purple;
+    width: 90%;
+    min-height: 300px;
+    .containerTasks{
+        flex: 50%;
+        border: 1px solid green;
+        flex-flow: column;
+        .resumoEcoTask{
+            color: gray;
+            margin: 0 5vh;
+            margin-bottom: 5vh;
+            border: 1px solid pink;
+        }
+        .ecoTasks{
+            flex-flow: column;
+            border: 1px solid saddlebrown;
+            // flex-direction: column;
+            .ecoTask{
+                height: 55px;
+                margin: 10px 5%;
+                width: 90%;
+                align-items: center;
+                padding: 0 5%;
+                justify-content: space-between;
+                // border: 1px solid #427066;
+                box-shadow: 0 4px 8px 0 rgba(0, 92, 21, 0.2);
+                p{
+                    font-size: 20px;
+                }
+                span{
+                    font-size: 30px;
+                }
+            }
+        }
+    }
+    .containerRanking{
+        flex: 50%;
+        border: 1px solid green;
+
+    }
 }
