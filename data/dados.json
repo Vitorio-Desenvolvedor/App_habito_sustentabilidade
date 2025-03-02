@@ -1,0 +1,19 @@
+{
+  "users": {
+    "eb3266907@gmail.com": {
+      "nome": "Emerson",
+      "senha": "1234",
+      "allTasks": {},
+      "ecoTasks": {}
+    }
+  },
+  "login": {
+    "eb3266907@gmail.com": {
+      "nome": "Emerson",
+      "senha": "1234",
+      "allTasks": {},
+      "ecoTasks": {}
+    }
+  },
+  "ecoTasks": {}
+}
